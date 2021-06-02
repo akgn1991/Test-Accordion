@@ -56,8 +56,8 @@ function Details({cart,setCart,setPage,getValue,name}) {
           ...temp
       })
 
-      if (fieldValues == values)
-          return Object.values(temp).every(x => x == "")
+      if (fieldValues === values)
+          return Object.values(temp).every(x => x === "")
   }
 
 
