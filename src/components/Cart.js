@@ -50,11 +50,11 @@ export default function Cart({ cart, setCart }) {
     setCart(newCart);
   };
 
-  const removeFromCart = (productToRemove) => {
-    setCart(
-      cart.filter((product) => product !== productToRemove)
-    );
-  };
+  // const removeFromCart = (productToRemove) => {
+  //   setCart(
+  //     cart.filter((product) => product !== productToRemove)
+  //   );
+  // };
 
   return (
     <>
