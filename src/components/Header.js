@@ -30,18 +30,18 @@ function Header({cart,setPage,setCart,name,setName}) {
           <Typography style={{marginLeft:"900px"}} >{name}</Typography>
           </Grid>
           <Grid item >
-            <IconButton>
+            <IconButton onClick={()=>setPage(true)}>
               <Badge  color="secondary">
-                <PeopleOutlineSharpIcon fontSize="small" onClick={()=>setPage(true)}/>
+                <PeopleOutlineSharpIcon fontSize="small" />
               </Badge>
             </IconButton>
-            <IconButton>
+            <IconButton onClick={()=>setPage(false)}>
               <Badge badgeContent={cart.length} color="secondary">
-                <AddShoppingCartSharpIcon fontSize="small" onClick={()=>setPage(false)}/>
+                <AddShoppingCartSharpIcon fontSize="small" />
               </Badge>
             </IconButton>
-            <IconButton>
-              <ExitToAppTwoToneIcon fontSize="small" onClick={handleLogout} />
+            <IconButton onClick={handleLogout}>
+              <ExitToAppTwoToneIcon fontSize="small"  />
             </IconButton>
           </Grid>
         </Grid>

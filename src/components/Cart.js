@@ -73,16 +73,19 @@ export default function Cart({ cart, setCart }) {
           </TableRow>
         </TableHead>
         <TableBody>
-          {cart.map((row) => (
+          {cart.map((row) => {
+            const {title,quantity=1} =row
+            return(
             <StyledTableRow key={row.title}>
               <StyledTableCell component="th" scope="row">
-                {row.title}
+                {title}
               </StyledTableCell>
               <StyledTableCell align="center">{row.title}</StyledTableCell>
-              <StyledTableCell align="center"><input style={{width:"30px"}} value={row.quantity} onChange={(e) =>setQuantity(row,parseInt(e.target.value))}/></StyledTableCell>
+              <StyledTableCell align="center"><input style={{width:"30px"}} value={quantity} onChange={(e) =>setQuantity(row,parseInt(e.target.value))}/></StyledTableCell>
               <StyledTableCell align="center">{row.price}</StyledTableCell>
             </StyledTableRow>
-          ))}
+      )})
+        }
         </TableBody>
       </Table>
       <p style={{marginLeft:"1150px", fontWeight:"900"}}>Total&emsp;₹{getTotalSum()}</p>
