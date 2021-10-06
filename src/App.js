@@ -16,7 +16,7 @@ function App() {
 
   return (
     <div>
-      hello Arun this is from Arun branch
+      need to create seperate branch
       <Header setPage={setPage} cart={cart} setCart={setCart} name = {name} setName={setName}/>
       {page?<Details cart={cart} setCart={setCart} setPage={setPage} getValue={getValue} name = {name} />:<Cart cart={cart} setCart={setCart}/>}    
       <CssBaseline />
